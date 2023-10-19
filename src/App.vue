@@ -30,9 +30,9 @@
     <p>qwe</p>
     <!-- task2.2 -->
     <hr>
-    <button @click="show = !show">Перемкнути</button>
+    <button @click="isVisible = !isVisible">Перемкнути</button>
     <Transition name="bounce">
-      <p v-if="show" style="margin-top: 20px; text-align: center;">
+      <p v-if="isVisible" style="margin-top: 20px; text-align: center;">
         трохи пружний текст
       </p>
     </Transition>
@@ -100,8 +100,7 @@ export default {
         },
       ],
       colors: ['yellow', 'green', 'red', 'orange', 'pink'],
-      showElement: false,
-      show: true,
+      isVisible: true,
       isDark: false,
       rowValue: '',
       columnValue: '',
